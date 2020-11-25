@@ -43,19 +43,19 @@ function buildnav() {
         const list =document.createElement('li');
         const ancr =document.createElement('a');
         //ancr.classList.add("#");
-        const secid=sections[i].getAttribute("id")
-        list.id =secid;
+        const secid=sections[i].getAttribute("id");
+        //list.id =secid;
         //ancr.classList="";
-        ancr.href ='#' + sections[i].getAttribute(secid);
+        ancr.href ='#' + sections[i].getAttribute('id');
        //ancr.appendChild(document.createTextNode("section "+ i++));
          ancr.appendChild(document.createTextNode(sections[i].getAttribute("data-nav")));
         i++
         list.appendChild(ancr);
         nav.appendChild(list);
         list.classList.add("menu__link");
-        list.addEventListener('click', function (event) {
-            sections[i].scrollIntoView();
-        });
+        // list.addEventListener('click', function (event) {
+        //     sections[i].scrollIntoView();
+        // });
         // list.scrollIntoView()
         // console.log(sections[i].getAttribute("data-nav"));
         // console.log(sections[i].getAttribute("id"));
